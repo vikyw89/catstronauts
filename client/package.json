@@ -10,6 +10,7 @@
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "dotenv": "^16.3.1",
     "graphql": "^16.8.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -21,7 +22,7 @@
   "scripts": {
     "test": "vitest",
     "start": "vite",
-    "preview":"vite preview --host --port 3000",
+    "preview": "vite preview --host --port 3000",
     "build": "graphql-codegen && vite build",
     "generate": "graphql-codegen"
   },
