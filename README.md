@@ -1,35 +1,69 @@
-# Odyssey Lift-off I: Basics
+# Project Name
 
-Welcome to the companion app of Odyssey Lift-off I! You can [find the course lessons and instructions on Odyssey](https://odyssey.apollographql.com/lift-off-part1), Apollo's learning platform.
+Description of your project.
 
-You can [preview the completed demo app here](https://odyssey-catstronauts.netlify.app/).
+## Getting Started
 
-## How to use this repo
+These instructions will guide you on how to set up and run the project locally.
 
-The course will walk you step by step on how to implement the features you see in the demo app. This codebase is the starting point of your journey!
+### Prerequisites
 
-There are 3 main folders:
+- Docker: [Installation Guide](https://docs.docker.com/get-docker/)
+- Node.js: [Installation Guide](https://nodejs.org/en/download/)
 
-- `server`: The starting point of our GraphQL server.
-- `client`: The starting point of our React application.
-- `final`: The final stage of both the server and client folders, with all of the steps and code completed!
+### Development
 
-To get started:
+1. Clone the repository:
 
-1. Navigate to the `server` folder.
-1. Run `npm install`.
-1. Run `npm start`.
+   ```shell
+   git clone <repository-url>
+   ```
 
-This will start the GraphQL API server.
+   Navigate to the project root directory:
 
-In another terminal window,
+   ```
+   cd project-directory
+   ```
 
-1. Navigate to the `client` folder.
-1. Run `npm install`.
-1. Run `npm start`.
+   Install the dependencies:
 
-This will open up `localhost:3000` in your web browser.
+   ```
+   npm install
+   ```
 
-## Getting Help
+   Start the backend server:
 
-For any issues or problems concerning the course content, please refer to the [Odyssey topic in our community forums](https://community.apollographql.com/tags/c/help/6/odyssey).
+   ```
+   npm start
+   ```
+
+   The GraphQL API server will start running on http://localhost:4000.
+
+   Start the frontend client:
+
+   ```
+   cd client
+   npm install
+   npm start
+   ```
+
+   The React application will start running on http://localhost:3000.
+
+2. Deployment
+   To deploy the application using Docker, follow these steps:
+
+   ```bash
+   docker compose -f compose.alpha.yml up
+   ```
+
+   The application will be accessible at http://localhost:3000.
+
+### Built With
+
+List the technologies/frameworks used in the project.
+License
+This project is licensed under the [License Name] - see the LICENSE file for details.
+
+### Acknowledgments
+
+Apollo graphql
