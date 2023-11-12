@@ -29,4 +29,5 @@ export const typeDefs = gql`
     "Author's profile picture url"
     photo: String
   }
+  
 `;
