@@ -1,0 +1,16 @@
+FROM node:20-alpine3.18 AS BUILD
+WORKDIR /app
+COPY . .
+RUN npm i
+RUN npm run build
+
+FROM busybox:1.35 AS PROD
+
+# Create a non-root user to own the files and run our server
+RUN adduser -D static
+USER static
+WORKDIR /home/static
+COPY /app/dist .
+
+# Run BusyBox httpd
+CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]

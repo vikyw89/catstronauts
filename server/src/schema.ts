@@ -5,7 +5,7 @@ export const typeDefs = gql`
     "Get tracks array for homepage grid"
     tracksForHome: [Track!]!
   }
-   
+
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
@@ -20,7 +20,7 @@ export const typeDefs = gql`
     "The number of modules this track contains"
     modulesCount: Int
   }
-   
+
   "Author of a complete Track"
   type Author {
     id: ID!
@@ -29,5 +29,4 @@ export const typeDefs = gql`
     "Author's profile picture url"
     photo: String
   }
-  
 `;
