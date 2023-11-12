@@ -6,6 +6,7 @@ import fs from 'fs/promises';
   We should remove as soon as video updates can be prioritized.
 */
 export default defineConfig(() => ({
+  base: "/catstronauts/",
   test: {
     globals: true,
     environment: 'happy-dom',
