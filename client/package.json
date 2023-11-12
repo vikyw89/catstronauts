@@ -22,7 +22,7 @@
     "test": "vitest",
     "start": "vite",
     "preview":"vite preview --host --port 3000",
-    "build": "vite build",
+    "build": "vite build && graphql-codegen",
     "generate": "graphql-codegen"
   },
   "browserslist": {
