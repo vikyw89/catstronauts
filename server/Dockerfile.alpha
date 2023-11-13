@@ -6,7 +6,7 @@ RUN npm run build
 
 FROM node:20-alpine3.18 AS PROD
 WORKDIR /app
-COPY --from=BASE /app/dist .
+COPY --from=BASE /app/dist ./dist
 COPY --from=BASE /app/package.json .
 COPY --from=BASE /app/package-lock.json .
 RUN npm i --omit=dev
