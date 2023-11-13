@@ -10,4 +10,5 @@ COPY --from=BASE /app/dist .
 COPY --from=BASE /app/package.json .
 COPY --from=BASE /app/package-lock.json .
 RUN npm i --omit=dev
+EXPOSE 4000
 CMD npm run start

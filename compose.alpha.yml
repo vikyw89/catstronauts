@@ -1,4 +1,5 @@
 name: catstronauts-alpha
+
 services:
   catstronauts-alpha-client:
     image: catstronauts-alpha-client
