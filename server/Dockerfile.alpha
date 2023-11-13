@@ -1,14 +1,13 @@
-FROM node:20-alpine3.18 AS BUILD
+FROM node:20-alpine3.18 AS BASE
 WORKDIR /app
 COPY . .
-RUN npm ci
+RUN npm i
 RUN npm run build
 
 FROM node:20-alpine3.18 AS PROD
 WORKDIR /app
-COPY --from=BUILD /app/dist ./dist
-COPY --from=BUILD /app/package.json .
-COPY --from=BUILD /app/package-lock.json .
-RUN npm ci --omit=dev
-EXPOSE 4000
+COPY --from=BASE /app/dist .
+COPY --from=BASE /app/package.json .
+COPY --from=BASE /app/package-lock.json .
+RUN npm i --omit=dev
 CMD npm run start

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { colors, IconArrowRight, IconDoubleArrowRight } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
 
@@ -13,20 +13,16 @@ const ModulesNav: React.FC<{module: any, track: any}> = ({ module, track }) => {
     <ModulesNavContainer>
       <ModuleTitle>
         <h4>
-          {/* Need to comment this out until Link is placed within a Router */}
-          {/* <Link to="../.."> */}
-          {track.title}
-          {/*</Link> */}
+          <Link to="../..">{track.title}</Link>
         </h4>
       </ModuleTitle>
       <ModulesList>
         {track.modules.map((navModule: any) => (
           <ModuleListItem key={`module_${navModule.id}`}>
             <div>
-              {/* Need to comment this out until Link is placed within a Router */}
-              {/* <ModuleNavStyledLink
+              <ModuleNavStyledLink
                 to={`/track/${track.id}/module/${navModule.id}`}
-              > */}
+              >
                 <ModuleListItemContent isActive={navModule.id === module.id}>
                   {navModule.id === module.id ? (
                     <IconDoubleArrowRight width="14px" />
@@ -36,7 +32,7 @@ const ModulesNav: React.FC<{module: any, track: any}> = ({ module, track }) => {
                   <div>{navModule.title}</div>
                   <div>{humanReadableTimeFromSeconds(navModule.length)}</div>
                 </ModuleListItemContent>
-              {/* </ModuleNavStyledLink> */}
+              </ModuleNavStyledLink>
             </div>
           </ModuleListItem>
         ))}
@@ -96,11 +92,11 @@ const ModuleListItem = styled.li((props) => ({
   },
 }));
 
-// const ModuleNavStyledLink = styled(Link)({
-//   textDecoration: 'none',
-//   display: 'flex',
-//   alignItems: 'center',
-// });
+const ModuleNavStyledLink = styled(Link)({
+  textDecoration: 'none',
+  display: 'flex',
+  alignItems: 'center',
+});
 
 const ModuleListItemContent = styled.div((props: { isActive: boolean }) => ({
   backgroundColor: props.isActive ? colors.black.base : colors.black.light,

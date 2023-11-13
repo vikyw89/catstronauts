@@ -1,17 +1,18 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
 
+const SERVER_BASE_URL = import.meta.env.VITE_SERVER_BASE_URL
+
 const config: CodegenConfig = {
-    schema: "https://catstronauts-server-alpha.23.94.26.231.sslip.io/",
-    documents: ["src/**/*.tsx"],
-    generates: {
-        "./src/__generated__/": {
-            preset: "client",
-            presetConfig: {
-                gqlTagName: "gql"
-            }
-        }
+  schema: SERVER_BASE_URL,
+  documents: ["src/**/*.tsx"],
+  generates: {
+    "./src/__generated__/": {
+      preset: "client",
+      presetConfig: {
+        gqlTagName: "gql",
+      },
     },
-    ignoreNoDocuments: true
+  }
 };
 
 export default config;

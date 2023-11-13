@@ -1,5 +1,5 @@
 import React, {PropsWithChildren} from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer } from '.';
 import styled from '@emotion/styled';
 import { widths, unit } from '../styles';
 
@@ -35,7 +35,7 @@ const PageContainer = styled.div<LayoutProps>`
   align-self: center;
   flex-grow: 1;
   max-width: ${({ fullWidth }) => fullWidth ? undefined : `${widths.regularPageWidth}px`};
-  width: '100%';
+  width: 100%;
   padding: ${({ fullWidth }) => fullWidth ? 0 : unit * 2};
   padding-bottom: unit * 5;
-`;
+`

@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import GlobalStyles from './styles';
-import Pages from './pages';
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"
+import React from "react";
+import ReactDOM from "react-dom";
+import GlobalStyles from "./styles";
+import Pages from "./pages";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+const SERVER_BASE_URL = import.meta.env.VITE_SERVER_BASE_URL
 
 const client = new ApolloClient({
-  uri: "https://catstronauts-server-alpha.23.94.26.231.sslip.io/",
-  cache: new InMemoryCache()
-})
+  uri: SERVER_BASE_URL,
+  cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,5 +18,5 @@ ReactDOM.render(
       <Pages />
     </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
