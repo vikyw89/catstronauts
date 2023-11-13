@@ -1,15 +1,15 @@
 name: catstronauts-alpha
 services:
-  # catstronauts-alpha-client:
-  #   image: catstronauts-alpha-client
-  #   build:
-  #     context: ./client
-  #     dockerfile: Dockerfile.alpha
-  #   ports:
-  #     - "3000:80"
-  #   volumes:
-  #     - ./client:/app
-  #   restart: always
+  catstronauts-alpha-client:
+    image: catstronauts-alpha-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile.alpha
+    ports:
+      - "3000:80"
+    volumes:
+      - ./client:/app
+    restart: always
 
   catstronauts-alpha-server:
     image: catstronauts-alpha-server

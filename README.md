@@ -4,7 +4,7 @@ Fullstack Graphql playground using apollo and TS
 
 ## Preview
 
-client-alpha: https://catstronauts-seven.vercel.app/
+client-alpha: https://catstronauts-client-alpha.23.94.26.231.sslip.io/
 server-alpha: https://catstronauts-server-alpha.23.94.26.231.sslip.io/
 
 ## Getting Started
@@ -20,8 +20,8 @@ These instructions will guide you on how to set up and run the project locally.
 
 1. Clone the repository:
 
-   ```shell
-   git clone <repository-url>
+   ```bash
+   git clone <this-repository-url>
    ```
 
    Navigate to the project root directory:
